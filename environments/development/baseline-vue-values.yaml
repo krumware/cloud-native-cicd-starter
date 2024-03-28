@@ -1,9 +1,10 @@
 image:
-  repository: krumware/baseline-vue-app
+  repository: krumdevelopment/baseline-vue-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
-imagePullSecrets: []
+imagePullSecrets:
+  - name: docker-pull-secret
 service:
   type: ClusterIP
   port: 80
